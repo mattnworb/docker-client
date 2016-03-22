@@ -1,0 +1,12 @@
+sudo: required
+
+services:
+  - docker
+
+language: java
+
+before_install:
+  - docker version
+  - docker info
+
+script: mvn verify
