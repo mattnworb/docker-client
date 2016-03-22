@@ -1512,7 +1512,7 @@ public class DefaultDockerClientTest {
   @Test
   public void testSsl() throws Exception {
     assumeFalse(TRAVIS);
-    
+
     // Build a run a container that contains a Docker instance configured with our SSL cert/key
     final String imageName = "test-docker-ssl";
     final String expose = "2376/tcp";
