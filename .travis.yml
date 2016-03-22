@@ -1,0 +1,20 @@
+sudo: required
+
+services:
+  - docker
+
+language: java
+
+jdk:
+  - oraclejdk8
+  - oraclejdk7
+
+env:
+  - DOCKER_HOST=tcp://127.0.0.1:2375
+  - DOCKER_HOST=unix:///var/run/docker.sock
+
+before_install:
+  - docker version
+  - docker info
+
+script: mvn verify
